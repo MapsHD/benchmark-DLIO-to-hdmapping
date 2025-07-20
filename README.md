@@ -1,10 +1,10 @@
-# dlo-converter
+# dlio-converter
 
 ## Intended use 
 
-This small toolset allows to integrate SLAM solution provided by [dlo](https://github.com/vectr-ucla/direct_lidar_odometry) with [HDMapping](https://github.com/MapsHD/HDMapping).
+This small toolset allows to integrate SLAM solution provided by [dlio](https://github.com/vectr-ucla/direct_lidar_inertial_odometry) with [HDMapping](https://github.com/MapsHD/HDMapping).
 This repository contains ROS 1 workspace that :
-  - submodule to tested revision of dlo
+  - submodule to tested revision of dlio
   - a converter that listens to topics advertised from odometry node and save data in format compatible with HDMapping.
 
 
@@ -14,7 +14,7 @@ Clone the repo
 ```shell
 mkdir -p /test_ws/src
 cd /test_ws/src
-git clone https://github.com/marcinmatecki/DLO-to-hdmapping.git --recursive
+git clone https://github.com/marcinmatecki/DLIO-to-hdmapping.git --recursive
 cd ..
 catkin_make
 ```
@@ -32,7 +32,7 @@ and start odometry:
 ```shell 
 cd /test_ws/
 source ./devel/setup.sh # adjust to used shell
-roslaunch direct_lidar_odometry dlo.launch pointcloud_topic:=<pc_topic_name> imu_topic:=<imu_topic_name>
+roslaunch roslaunch direct_lidar_inertial_odometry dlio.launch pointcloud_topic:=<pc_topic_name> imu_topic:=<imu_topic_name>
 rosbag play <path_to_rosbag>
 ```
 
@@ -41,5 +41,5 @@ rosbag play <path_to_rosbag>
 ```shell
 cd /test_ws/
 source ./devel/setup.sh # adjust to used shell
-rosrun dlo-to-hdmapping listener <recorded_bag> <output_dir>
+rosrun dlio-to-hdmapping listener <recorded_bag> <output_dir>
 ```
