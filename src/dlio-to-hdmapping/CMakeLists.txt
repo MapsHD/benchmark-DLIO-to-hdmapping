@@ -48,7 +48,7 @@ include_directories(
   common
 )
 
-add_executable(listener src/direct_lidar_interial_odometry_subscriber.cpp src/laz_writer.cpp)
+add_executable(listener src/direct_lidar_inertial_odometry_subscriber.cpp src/laz_writer.cpp)
 
 
 
