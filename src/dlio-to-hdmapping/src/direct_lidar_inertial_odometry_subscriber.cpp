@@ -107,8 +107,8 @@ int main(int argc, char **argv)
     rosbag::View view(bag); 
 
     for (const rosbag::MessageInstance& m : view) {
-        if (m.getTopic() == "/robot/dlo/odom_node/pointcloud/keyframe") {
-            ROS_INFO("Received message on topic: /robot/dlo/odom_node/pointcloud/keyframe");
+        if (m.getTopic() == "/robot/dlio/odom_node/pointcloud/deskewed") {
+            ROS_INFO("Received message on topic: /robot/dlio/odom_node/pointcloud/deskewed");
 
             sensor_msgs::PointCloud2::ConstPtr cloud_msg = m.instantiate<sensor_msgs::PointCloud2>();
 
@@ -159,8 +159,8 @@ int main(int argc, char **argv)
             }
         }
        
-        if (m.getTopic() == "/robot/dlo/odom_node/odom") {
-            ROS_INFO("Received message on topic: /robot/dlo/odom_node/odom");
+        if (m.getTopic() == "/robot/dlio/odom_node/odom") {
+            ROS_INFO("Received message on topic: /robot/dlio/odom_node/odom");
 
             nav_msgs::Odometry::ConstPtr odom_msg = m.instantiate<nav_msgs::Odometry>();
 
