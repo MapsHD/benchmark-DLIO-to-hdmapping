@@ -25,7 +25,7 @@ Prepare recorded bag with estimated odometry:
 
 In first terminal record bag:
 ```shell
-rosbag record /robot/dlo/odom_node/odom /robot/dlo/odom_node/pointcloud/keyframe
+rosbag record /robot/dlio/odom_node/odom /robot/dlio/odom_node/pointcloud/deskewed
 ```
 
 and start odometry:
