@@ -1,5 +1,5 @@
-[submodule "src/direct_lidar_odometry"]
-        path = src/direct_lidar_odometry
+[submodule "src/direct_lidar_inertial_odometry"]
+        path = src/direct_lidar_inertial_odometry
         url = https://github.com/vectr-ucla/direct_lidar_inertial_odometry
 [submodule "src/dlio-to-hdmapping/src/3rdparty/LASzip"]
 	path = src/dlio-to-hdmapping/src/3rdparty/LASzip
