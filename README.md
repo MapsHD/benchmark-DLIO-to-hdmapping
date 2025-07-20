@@ -32,7 +32,7 @@ and start odometry:
 ```shell 
 cd /test_ws/
 source ./devel/setup.sh # adjust to used shell
-roslaunch roslaunch direct_lidar_inertial_odometry dlio.launch pointcloud_topic:=<pc_topic_name> imu_topic:=<imu_topic_name>
+roslaunch direct_lidar_inertial_odometry dlio.launch pointcloud_topic:=<pc_topic_name> imu_topic:=<imu_topic_name>
 rosbag play <path_to_rosbag>
 ```
 
