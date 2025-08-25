@@ -55,12 +55,6 @@ Download the dataset from [GitHub - ConSLAM](https://github.com/mac137/ConSLAM) 
 directly from this [Google Drive link](https://drive.google.com/drive/folders/1TNDcmwLG_P1kWPz3aawCm9ts85kUTvnU). 
 Then, download **sequence2**.
 
-## Convert(If it's a ROS1 .bag file):
-
-```shell
-rosbags-convert --src {your_downloaded_bag} --dst {desired_destination_for_the_converted_bag}
-```
-
 ## Record the bag file:
 
 ```shell
